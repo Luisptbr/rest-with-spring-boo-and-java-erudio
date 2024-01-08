@@ -3,14 +3,33 @@ package br.com.erudio.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+
+@Entity
+@Table(name = "person") //Nome da tabela referente a esta classe.
 public class Person implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(name = "first_name", nullable = false, length = 80)
 	private String firstName;
+	
+	@Column(name = "last_name",nullable = false, length = 80)
 	private String lastName;
+	
+	@Column(nullable = false, length = 100)
 	private String address;
+	
+	@Column(nullable = false, length = 9) 
 	private String gender;
 	
 	public Person() {
@@ -55,7 +74,7 @@ public class Person implements Serializable {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
+	// hashcode adicionado proximo ao Getters and setters
 	@Override
 	public int hashCode() {
 		return Objects.hash(address, firstName, gender, id, lastName);

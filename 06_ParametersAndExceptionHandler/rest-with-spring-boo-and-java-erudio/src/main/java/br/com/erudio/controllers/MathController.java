@@ -27,7 +27,7 @@ public class MathController {
 			@PathVariable(value = "numberTwo") String numberTwo
 			)throws Exception{
 		if (!NumberConverter.isNumeric (numberOne) || !NumberConverter.isNumeric (numberTwo)) 
-			throw new UnsupportedMathOperationException("Please set a numeric value!");
+			throw new UnsupportedMathOperationException("Por favor, digite um valor numérico!");
 		return math.sum(NumberConverter.convertToDouble (numberOne), NumberConverter.convertToDouble(numberTwo));
 	}
 	//DIVISÃO
@@ -39,7 +39,7 @@ public class MathController {
 			@PathVariable(value = "numberTwo") String numberTwo
 			)throws Exception{
 		if (!NumberConverter.isNumeric (numberOne) || !NumberConverter.isNumeric (numberTwo)) 
-			throw new UnsupportedMathOperationException("Please set a numeric value!");
+			throw new UnsupportedMathOperationException("Por favor, digite um valor numérico!");
 		return math.div(NumberConverter.convertToDouble (numberOne), NumberConverter.convertToDouble(numberTwo));
 	}
 	//SUBTRAÇÃO
@@ -51,7 +51,7 @@ public class MathController {
 			@PathVariable(value = "numberTwo") String numberTwo
 			)throws Exception{
 		if (!NumberConverter.isNumeric (numberOne) || !NumberConverter.isNumeric (numberTwo)) 
-			throw new UnsupportedMathOperationException("Please set a numeric value!");
+			throw new UnsupportedMathOperationException("Por favor, digite um valor numérico!");
 		return math.sub(NumberConverter.convertToDouble (numberOne), NumberConverter.convertToDouble(numberTwo));
 	}
 	//MULTIPLICAÇÃO
@@ -63,7 +63,7 @@ public class MathController {
 			@PathVariable(value = "numberTwo") String numberTwo
 			)throws Exception{
 		if (!NumberConverter.isNumeric (numberOne) || !NumberConverter.isNumeric (numberTwo)) 
-			throw new UnsupportedMathOperationException("Please set a numeric value!");
+			throw new UnsupportedMathOperationException("Por favor, digite um valor numérico!");
 		return math.mult(NumberConverter.convertToDouble (numberOne), NumberConverter.convertToDouble(numberTwo));
 	}
 	//MEDIA
@@ -75,7 +75,7 @@ public class MathController {
 			@PathVariable(value = "numberTwo") String numberTwo
 			)throws Exception{
 		if (!NumberConverter.isNumeric (numberOne) || !NumberConverter.isNumeric (numberTwo)) 
-			throw new UnsupportedMathOperationException("Please set a numeric value!");
+			throw new UnsupportedMathOperationException("Por favor, digite um valor numérico!");
 		return math.med(NumberConverter.convertToDouble(numberOne),NumberConverter.convertToDouble(numberTwo));
 	}
 	//RAIZ QUADRADA
@@ -87,7 +87,7 @@ public class MathController {
 			)throws Exception{
 		
 		if (!NumberConverter.isNumeric (number)) 
-			throw new UnsupportedMathOperationException("Please set a numeric value!");
+			throw new UnsupportedMathOperationException("Por favor, digite um valor numérico!");
 		return math.raiz(NumberConverter.convertToDouble (number));
 	}
 
