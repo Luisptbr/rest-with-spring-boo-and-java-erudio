@@ -4,8 +4,11 @@ spring:
     url: jdbc:mysql://localhost:3306/rest_with_spring_boot_erudio?useTimezone=true&serverTimezone=UTC
     username: root
     password: admin123
+    
   jpa:
     open-in-view: false
     hibernate:
       ddl-auto: none
     show-sql: false
+#    debug: true
+   
